@@ -104,6 +104,7 @@ function CardItem({ data, index, boardData, setBoardData, name }) {
                       width="36"
                       height="36"
                       className="rounded-full object-cover"
+                      alt="user"
                     />
                   </li>
                 );

@@ -91,6 +91,7 @@ export default function Home() {
                 width="36"
                 height="36"
                 className="rounded-full object object-cover"
+                alt="user"
               />
             </li>
             <li>
@@ -99,6 +100,7 @@ export default function Home() {
                 width="36"
                 height="36"
                 className="rounded-full object-cover"
+                alt="user"
               />
             </li>
             <li>
@@ -107,6 +109,7 @@ export default function Home() {
                 width="36"
                 height="36"
                 className="rounded-full object-cover"
+                alt="user"
               />
             </li>
             <li>

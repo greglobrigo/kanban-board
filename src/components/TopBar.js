@@ -171,7 +171,9 @@ function TopBar({setBoardData, boardData}) {
                     <h3 className="font-bold mr-3">M. John Doe</h3>
                     <Image src="https://randomuser.me/api/portraits/men/75.jpg"
                         width="36" height="36"
-                        className="rounded-full object-cover"/>
+                        className="rounded-full object-cover"
+                        alt="user"
+                        />
                 </div>
             </div>
         </div>
