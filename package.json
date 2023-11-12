@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.0",
+    "@heroicons/react": "^1.0.4",
+    "@tailwindcss/forms": "^0.3.3",
+    "react-beautiful-dnd": "^13.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.2"
+    "next": "13.4.19"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
