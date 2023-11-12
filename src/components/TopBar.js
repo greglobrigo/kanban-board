@@ -154,8 +154,8 @@ function TopBar({ setBoardData, boardData }) {
     }
 
     return (
-        <div className="h-16 fixed top-0 bg-gradient-to-r from-purple-400 w-screen
-        to-blue-500 flex items-center justify-between">
+        <div className="h-16 fixed top-0 bg-gradient-to-r from-green-500
+        to-blue-500 flex items-center justify-between w-screen">
             <div className='flex items-center justify-center gap-2 cursor-pointer'>
                 <SearchIcon className="w-5 h-5 text-white ml-[20px]" />
                 <input onChange={(e) => handleEdit(e.target.value)} value={inputValue}
@@ -168,7 +168,7 @@ function TopBar({ setBoardData, boardData }) {
                 <AtSymbolIcon className="w-7 h-7 text-white" />
                 <BellIcon className="w-7 h-7 text-white" />
                 <div className="flex items-center text-white">
-                    <h3 className="font-bold mr-3">M. John Doe</h3>
+                    <h3 className="font-bold mr-3">Joshua G</h3>
                     <Image src="https://randomuser.me/api/portraits/men/75.jpg"
                         width="36" height="36"
                         className="rounded-full object-cover"

@@ -77,7 +77,7 @@ export default function Home() {
         {/* Board header */}
         <div className="flex flex-initial justify-between">
           <div className="flex items-center">
-            <h4 className="text-4xl font-bold text-gray-600">Scrum Board</h4>
+            <h4 className="text-4xl font-bold text-gray-600">Sprint 32 (2 weeks)</h4>
             <ChevronDownIcon
               className="w-9 h-9 text-gray-500 rounded-full
             p-1 bg-white ml-5 shadow-xl"
