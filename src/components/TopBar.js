@@ -156,12 +156,12 @@ function TopBar({ setBoardData, boardData }) {
     return (
         <div className="h-16 fixed top-0 bg-gradient-to-r from-purple-400 w-screen
         to-blue-500 flex items-center justify-between">
-            <div className='flex items-center justify-center gap-2'>
+            <div className='flex items-center justify-center gap-2 cursor-pointer'>
                 <SearchIcon className="w-5 h-5 text-white ml-[20px]" />
                 <input onChange={(e) => handleEdit(e.target.value)} value={inputValue}
-                    type="text" placeholder="Search for tasks ..."
-                    className="bg-transparent border-0 text-white placeholder-gray-200
-                    outline-none focus:ring-0 text-lg pr-[450px]"/>
+                    type="text" placeholder="  Search for tasks ..."
+                    className="bg-transparent border-b-2 text-white placeholder-gray-200
+                    outline-none focus:ring-0 text-lg pr-[450px] py-2 cursor-pointer"/>
             </div>
             <div className="flex space-x-6 items-center mr-[180px]">
                 <button onClick={handleResetData} className="text-white text-lg font-bold bg-red-600 rounded-sm px-4 py-2">Reset</button>
