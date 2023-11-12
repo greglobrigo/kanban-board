@@ -2,9 +2,8 @@ import React from "react";
 import Image from 'next/image'
 import { useState } from "react";
 import {
-  ChevronDownIcon,
   PlusIcon,
-  DotsVerticalIcon,
+  TrashIcon,
   ChatAlt2Icon,
   PaperClipIcon,
   PencilIcon
@@ -51,6 +50,19 @@ function CardItem({ data, index, boardData, setBoardData, name }) {
     setBoardData(newBoardData);
   }
 
+  const handleDeleteCard = (id) => {
+    let newBoardData = boardData.map((board) => {
+      if (board.name === name) {
+        let newItems = board.items.filter((item) => {
+          return item.id !== id;
+        });
+        board.items = newItems;
+      }
+      return board;
+    });
+    setBoardData(newBoardData);
+  }
+
 
   return (
     <Draggable index={index} draggableId={data.id.toString()}>
@@ -80,9 +92,18 @@ function CardItem({ data, index, boardData, setBoardData, name }) {
             </label>
             <PencilIcon onClick={() => setWillEdit(!willEdit)} className="w-4 h-5 cursor-pointer hover:bg-gray-100 rounded-full" />
           </div>
-          {!willEdit && <h5 className="text-md my-3 text-lg leading-6">{inputValue}</h5>}
-          {willEdit && <input onChange={(e) => handleEdit(e)} onKeyPress={(e) => {e.key === 'Enter' && setWillEdit(!willEdit)}}
-            type="text" className="w-full border border-gray-300 rounded-md my-2" value={inputValue} />}
+
+          {!willEdit &&
+            <div className="flex justify-between items-center">
+              <h5 className="text-md my-3 text-lg leading-6">{inputValue}</h5>
+              <TrashIcon className="min-w-[20px] min-h-[20px] max-w-[20px] max-h-[20px] cursor-pointer hover:bg-gray-100 rounded-full"
+              onClick={() => {handleDeleteCard(data.id)}}
+              />
+            </div>
+          }
+
+          {willEdit && <input onChange={(e) => handleEdit(e)} onKeyDown={(e) => { e.key === 'Enter' && setWillEdit(!willEdit) }}
+            type="text" className="w-full border border-gray-300 rounded-md pl-2 my-2" value={inputValue} />}
           <div className="flex justify-between">
             <div className="flex space-x-2 items-center">
               <span className="flex space-x-1 items-center">
