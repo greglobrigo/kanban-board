@@ -75,6 +75,30 @@ function TopBar({ setBoardData, boardData }) {
                                 "avt": "https://randomuser.me/api/portraits/men/79.jpg"
                             }
                         ]
+                    },
+                    {
+                        "id": 10,
+                        "priority": 0,
+                        "title": "Schema and database design documentation.",
+                        "chat": 0,
+                        "attachment": 3,
+                        "assignees": [
+                            {
+                                "avt": "https://randomuser.me/api/portraits/men/42.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 11,
+                        "priority": 2,
+                        "title": "Code review for upcoming release.",
+                        "chat": 0,
+                        "attachment": 3,
+                        "assignees": [
+                            {
+                                "avt": "https://randomuser.me/api/portraits/men/61.jpg"
+                            }
+                        ]
                     }
                 ]
             },
@@ -148,7 +172,7 @@ function TopBar({ setBoardData, boardData }) {
                     }
                 ]
             }
-        ];
+        ]
         setInputValue('');
         setBoardData(OriginalData);
     }
