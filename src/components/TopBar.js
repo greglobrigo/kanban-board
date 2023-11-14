@@ -49,7 +49,7 @@ function TopBar({ setBoardData, boardData }) {
                     },
                     {
                         "id": 9,
-                        "priority": 2,
+                        "priority": 0,
                         "title": "Refactoring of APIS.",
                         "chat": 10,
                         "attachment": 4,
